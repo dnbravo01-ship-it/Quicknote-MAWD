@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/note_card"
+    android:layout_width="170dp"
+    android:layout_height="170dp"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="#FFF176"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/note_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/note_title_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:fontFamily="@font/gloria_hallelujah"
+                android:hint="Title"
+                android:inputType="text"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="4dp"
+                android:background="#20000000" />
+
+            <EditText
+                android:id="@+id/note_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:fadeScrollbars="false"
+                android:fontFamily="@font/gloria_hallelujah"
+                android:gravity="top"
+                android:hint="New Note"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/selection_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:visibility="gone" />
+
+        <CheckBox
+            android:id="@+id/note_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/deleted_note_actions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#CCFFFFFF"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/btn_recover"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="Recover"
+                android:padding="8dp"
+                android:src="@drawable/recover_icon" />
+
+            <ImageView
+                android:id="@+id/btn_delete_permanent"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="Delete Permanently"
+                android:padding="8dp"
+                android:src="@drawable/delete_permanent_icon" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
