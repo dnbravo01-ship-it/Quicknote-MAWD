@@ -17,20 +17,18 @@
             android:layout_height="0dp"
             android:orientation="vertical"
             android:padding="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/note_date"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <EditText
-                android:id="@+id/note_title_edit_text"
+            <TextView
+                android:id="@+id/note_title_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:fontFamily="@font/gloria_hallelujah"
                 android:hint="Title"
-                android:inputType="text"
-                android:maxLength="20"
                 android:maxLines="1"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -41,19 +39,28 @@
                 android:layout_marginBottom="4dp"
                 android:background="#20000000" />
 
-            <EditText
-                android:id="@+id/note_edit_text"
+            <TextView
+                android:id="@+id/note_text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@null"
-                android:fadeScrollbars="false"
+                android:ellipsize="end"
                 android:fontFamily="@font/gloria_hallelujah"
                 android:gravity="top"
                 android:hint="New Note"
-                android:inputType="textMultiLine"
-                android:scrollbars="vertical"
+                android:maxLines="6"
                 android:textSize="14sp" />
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/note_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:fontFamily="@font/gloria_hallelujah"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <View
             android:id="@+id/selection_overlay"

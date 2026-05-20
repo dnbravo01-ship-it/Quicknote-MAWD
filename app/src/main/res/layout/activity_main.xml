@@ -126,31 +126,10 @@
             android:layout_height="wrap_content"
             android:padding="16dp">
 
-            <include
-                android:id="@+id/note1"
-                layout="@layout/note_item" />
-
-            <include
-                android:id="@+id/note2"
-                layout="@layout/note_item" />
-
-            <include
-                android:id="@+id/note3"
-                layout="@layout/note_item" />
-
-            <include
-                android:id="@+id/note4"
-                layout="@layout/note_item" />
-
-            <include
-                android:id="@+id/note5"
-                layout="@layout/note_item" />
-
             <androidx.constraintlayout.helper.widget.Flow
                 android:id="@+id/notesFlow"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:constraint_referenced_ids="note1,note2,note3,note4,note5"
                 app:flow_horizontalGap="16dp"
                 app:flow_horizontalStyle="packed"
                 app:flow_maxElementsWrap="2"
